@@ -12,22 +12,22 @@ import java.util.ArrayList;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String TABLE_DB = "gpcTable";
+    private static final String TABLE_DB = "gpcTable";
 
-    public static final String COLUMN_DataID = "DataID";
-    public static final String COLUMN_TIME_STAMP = "timestamp";
-    public static final String COLUMN_LATITUDE = "latitude";
-    public static final String COLUMN_LONGITUDE = "longitude";
-    public static final String COLUMN_ALTITUDE = "altitude";
+    private static final String COLUMN_DataID = "DataID";
+    private static final String COLUMN_TIME_STAMP = "timestamp";
+    private static final String COLUMN_LATITUDE = "latitude";
+    private static final String COLUMN_LONGITUDE = "longitude";
+    private static final String COLUMN_ALTITUDE = "altitude";
     private static final String COLUMN_ALTITUDE1 = "altitude1" ;
-    public static final String COLUMN_SUHU_UDARA = "suhu_udara";
-    public static final String COLUMN_KELEMBABAN_UDARA = "kelembaban_udara";
-    public static final String COLUMN_SUHU_BATERAI = "suhu_baterai";
-    public static final String COLUMN_TEKANAN_UDARA = "tekanan_udara";
-    public static final String COLUMN_CPU_TEMPERATURE = "suhu_cpu";
-    public static final String COLUMN_DIKIRIM = "Dikirim";
-    public static final String COLUMNSTATUS_LAYAR = "status_layar";
-    public static final String COLUMN_STATUS_BATERAI = "status_charging";
+    private static final String COLUMN_SUHU_UDARA = "suhu_udara";
+    private static final String COLUMN_KELEMBABAN_UDARA = "kelembaban_udara";
+    private static final String COLUMN_SUHU_BATERAI = "suhu_baterai";
+    private static final String COLUMN_TEKANAN_UDARA = "tekanan_udara";
+    private static final String COLUMN_CPU_TEMPERATURE = "suhu_cpu";
+    private static final String COLUMN_DIKIRIM = "Dikirim";
+    private static final String COLUMNSTATUS_LAYAR = "status_layar";
+    private static final String COLUMN_STATUS_BATERAI = "status_charging";
 
 
     public DatabaseHelper(@Nullable Context context) {

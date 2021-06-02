@@ -42,7 +42,7 @@ public class MainActivity extends Activity implements BottomNavigationView.OnNav
     private static final String LOG_TAG = "MainActivity";
     private static final int REQUEST_LOCATION_PERMISSION = 1;
 
-    String provinsi, kabupaten;
+    String provinsi, kabupaten, local;
 
     @SuppressLint("SimpleDateFormat")
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEEE, dd MMMM yyyy HH:mm");
@@ -130,15 +130,16 @@ public class MainActivity extends Activity implements BottomNavigationView.OnNav
 
     }
     @Override
-    public void processFinish(String kabupaten, String provinsi, String lokasi) {
+    public void processFinish(String kabupaten, String provinsi, String local, String lokasi) {
         try{
             this.kabupaten = kabupaten;
             this.provinsi = provinsi;
             this.lokasi = lokasi;
+            this.local = local;
             lokasiMainTextView.setText(lokasi);
             ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
             if(cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnected()){
-                new XMLParsingTask(this, kabupaten, provinsi).execute();
+                new XMLParsingTask(this, kabupaten, provinsi, local).execute();
             }
             else{
                 Toast.makeText(this, "Butuh Koneksi Internet", Toast.LENGTH_SHORT).show();

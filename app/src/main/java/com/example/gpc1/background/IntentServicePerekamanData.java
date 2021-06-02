@@ -220,7 +220,7 @@ public class IntentServicePerekamanData extends Service implements SensorEventLi
                         suhu.add(val);
                     }
                 } catch (Exception e) {
-//                    e.printStackTrace();
+                    e.printStackTrace();
                 }
             }
         }
