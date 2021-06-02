@@ -22,4 +22,5 @@ public class Constants {
     public static final String URL_SERVER = "http://192.168.1.72:80/api/send_data";
     public static final int PERIODE_REKAMAN_MENIT = 2; //TODO Atur waktu 10 menit sesuai dengan permintaan teman
     public static final int PERIODE_PENGIRIMAN_DATA = 180; //TODO Atur waktu menit sekali
+    //Untuk Perekaman Data Sjaa
 }
